@@ -12,12 +12,12 @@ private:
     int firstOccurrence(vector<int>&nums,int target){
         int low = 0;
         int high = nums.size()-1;
-        int first = -1;
+        int ans = -1;
 
         while(low<=high){
             int mid = (low+high)/2;
             if(nums[mid]==target){
-                first = mid;
+                ans = mid;
                 high = mid-1;
             }
             else if(nums[mid]<target){
@@ -27,7 +27,7 @@ private:
                 high = mid -1;
             }
         }
-        return first;
+        return ans;
     }
     int lastOccurence(vector<int> nums,int target){
         int low = 0;
