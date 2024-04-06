@@ -9,7 +9,7 @@ public:
             }
         }
         vector<int> ans;
-        while(!p.empty()){
+        while(p.size()>0){
             ans.push_back(p.top().second);
             p.pop();
         }
