@@ -5,9 +5,11 @@ private :
         int n = grid.size();
         int m = grid[0].size();
         vis[row][col] = 1;
-            // vec.push_back({row-row0,col-col0})
-        vector<int>delrow{-1,0,1,0};
-        vector<int>delcol{0,1,0,-1};
+        //     // vec.push_back({row-row0,col-col0})
+        // vector<int>delrow{-1,0,1,0};
+        // vector<int>delcol{0,1,0,-1};
+              int delrow[] = {0,0,1,-1,1,-1,1,-1}; //{-1, 0, +1, 0};  
+      int delcol[] = {1,-1,0,0,1,-1,-1,1}; //{0, -1, 0, +1}; 
         for (int i = 0; i < 4; i++) {
         int nrow = row + delrow[i];
         int ncol = col + delcol[i];
