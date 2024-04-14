@@ -1,6 +1,6 @@
 class Solution {
 public:
-    bool check(int src , vector<vector<int>> &graph , vector<int> &color){
+    bool checkBFS(int src , vector<vector<int>> &graph , vector<int> &color){
         queue<int> q;
         q.push(src);
         color[src] = 1;
@@ -38,7 +38,7 @@ public:
     // }
     for(int i =0;i<n;i++){
         if(color[i]==-1){
-            if(check(i,graph,color)==false) {
+            if(checkBFS(i,graph,color)==false) {
                 return false;
             }
         }
