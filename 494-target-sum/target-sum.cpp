@@ -60,8 +60,11 @@ public:
 
     int findTargetSumWays(vector<int>& nums, int target) {
         int n = nums.size();
-        int sumofarray = accumulate(nums.begin(), nums.end(), 0);
-
+        int sumofarray=0;
+        // int sumofarray = accumulate(nums.begin(), nums.end(), 0);
+        for(int i=0;i<n;i++){
+            sumofarray += nums[i];
+        }
         // Check if (sumofarray + target) is non-negative and even
         if ((sumofarray + target) % 2 != 0 || (sumofarray + target) < 0) {
             return 0;
