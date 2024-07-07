@@ -6,7 +6,7 @@ public:
         if (a == b) return true;
         if (a.length() <= 1) return false;
 
-        std::string key = a + ' ' + b;
+       string key = a + ' ' + b;
         if (mp.find(key) != mp.end()) {
             return mp[key];
         }
