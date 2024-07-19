@@ -15,10 +15,10 @@ public:
 
         ListNode* curr = head;
         int len = 1;
-        while(curr->next!=NULL)
+        while(curr->next!=NULL&&++len)
         {
             curr = curr->next;
-            len++;
+            // len++;
         }
 
         curr->next=head;
